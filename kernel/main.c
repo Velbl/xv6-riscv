@@ -16,6 +16,7 @@ main()
     printk("\n");
     printk("xv6 kernel is booting\n");
     printk("\n");
+    printk("physical memory: %lu MB\n", fdt_memsize() / (1024 * 1024));
     kinit();            // physical page allocator
     kvminit();          // create kernel page table
     kvminithart();      // turn on paging

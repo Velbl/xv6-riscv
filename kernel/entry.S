@@ -5,6 +5,10 @@
 .section .text
 .global _entry
 _entry:
+        # qemu passes the address of the device tree in a1.
+        # save it before a1 is reused below.
+        la t0, dtb_pa
+        sd a1, 0(t0)
         # set up a stack for C.
         # stack0 is declared in start.c,
         # with a 4096-byte stack per CPU.

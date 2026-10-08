@@ -56,6 +56,9 @@ int             writei(struct inode*, int, uint64, uint, uint);
 void            itrunc(struct inode*);
 void            ireclaim(int);
 
+// fdt.c
+uint64          fdt_memsize(void);
+
 // kalloc.c
 void*           kalloc(void);
 void            kfree(void *);
