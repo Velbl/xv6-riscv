@@ -26,6 +26,7 @@ int pause(int);
 int uptime(void);
 int sync(void);
 int freemem(void);
+int pgdump(void);
 
 // ulib.c
 int stat(const char *, struct stat *);

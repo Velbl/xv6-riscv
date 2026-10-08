@@ -116,3 +116,10 @@ sys_freemem(void)
 {
   return kfreemem();
 }
+
+uint64
+sys_pgdump(void)
+{
+  vmprint(myproc()->pagetable);
+  return 0;
+}
